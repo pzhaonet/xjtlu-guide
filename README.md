@@ -1,1 +1,1 @@
-# xjtlu-guide
+# A GUIDE FOR XJTLU NEWBIES
