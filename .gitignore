@@ -1,9 +1,7 @@
 .Rproj.user/
-image/
 tex/
 -book-xjtlu.Rproj
 _bookdown.yml
 _output.yml
 body-book-xjtlu.Rmd
 index.Rmd
-style.css
