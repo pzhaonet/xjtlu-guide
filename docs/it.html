@@ -165,13 +165,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="it.html"><a href="it.html#request-hardware-and-software"><i class="fa fa-check"></i><b>6.1</b> Request hardware and software</a></li>
 <li class="chapter" data-level="6.2" data-path="it.html"><a href="it.html#vpn"><i class="fa fa-check"></i><b>6.2</b> VPN</a></li>
 <li class="chapter" data-level="6.3" data-path="it.html"><a href="it.html#how-to-make-videos"><i class="fa fa-check"></i><b>6.3</b> How to make videos</a></li>
-<li class="chapter" data-level="6.4" data-path="it.html"><a href="it.html#ice"><i class="fa fa-check"></i><b>6.4</b> ICE</a></li>
-<li class="chapter" data-level="6.5" data-path="it.html"><a href="it.html#uol"><i class="fa fa-check"></i><b>6.5</b> UoL</a></li>
-<li class="chapter" data-level="6.6" data-path="it.html"><a href="it.html#matlab"><i class="fa fa-check"></i><b>6.6</b> MatLab</a></li>
+<li class="chapter" data-level="6.4" data-path="it.html"><a href="it.html#download-bbb-video-recordings"><i class="fa fa-check"></i><b>6.4</b> Download BBB video recordings</a></li>
+<li class="chapter" data-level="6.5" data-path="it.html"><a href="it.html#ice"><i class="fa fa-check"></i><b>6.5</b> ICE</a></li>
+<li class="chapter" data-level="6.6" data-path="it.html"><a href="it.html#uol"><i class="fa fa-check"></i><b>6.6</b> UoL</a></li>
+<li class="chapter" data-level="6.7" data-path="it.html"><a href="it.html#matlab"><i class="fa fa-check"></i><b>6.7</b> MatLab</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="financial.html"><a href="financial.html"><i class="fa fa-check"></i><b>7</b> Financial</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="financial.html"><a href="financial.html#fapiao"><i class="fa fa-check"></i><b>7.1</b> Fapiao</a></li>
+<li class="chapter" data-level="7.2" data-path="financial.html"><a href="financial.html#business-travel"><i class="fa fa-check"></i><b>7.2</b> Business Travel</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="university-marketing-and-communications-umc.html"><a href="university-marketing-and-communications-umc.html"><i class="fa fa-check"></i><b>8</b> University Marketing and Communications (UMC)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="university-marketing-and-communications-umc.html"><a href="university-marketing-and-communications-umc.html#staff-portrait-photos"><i class="fa fa-check"></i><b>8.1</b> Staff portrait photos</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="./" target="blank">Dr. Peng ZHAO</a></li>
@@ -286,20 +292,42 @@ Note: the general IT Consumable/Digital Product is centralized by MITS budget su
 <p><a href="https://video.xjtlu.edu.cn/Mediasite/Play/d8e1d78569ff48778dfe198a669906261d" class="uri">https://video.xjtlu.edu.cn/Mediasite/Play/d8e1d78569ff48778dfe198a669906261d</a></p>
 </div>
 </div>
-<div id="ice" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> ICE</h2>
+<div id="download-bbb-video-recordings" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Download BBB video recordings</h2>
+<p>The R package <strong>xjtlu</strong> provides a function which can download (and merge) the BBB video recordings including both the camera recordings and shared desktops. R must installed (see the <a href="https://xuer.pzhao.org/pdf/xuer-sample.pdf">book <em>Learning R</em></a>).</p>
+<ol style="list-style-type: decimal">
+<li>Install and load the package <strong>xjtlu</strong>.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="it.html#cb4-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(remotes)) <span class="kw">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
+<span id="cb4-2"><a href="it.html#cb4-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;pzhaonet/xjtlu&quot;</span>)</span>
+<span id="cb4-3"><a href="it.html#cb4-3"></a><span class="kw">library</span>(<span class="st">&quot;xjtlu&quot;</span>)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Open your video page on bbb. Right click on the webcam recording window, and choose “Copy video address”.</li>
+</ol>
+<p><img src="image/download_bbb1.png" /></p>
+<p><img src="image/download_bbb2.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Run the following command in R. Replace <code>webcam_url</code> with the hyperlink you just copied in your clipboard.</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="it.html#cb5-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;webcam_url&quot;</span>)</span></code></pre></div>
+<p>For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="it.html#cb6-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;https://bbbload.xjtlu.edu.cn/presentation/4c0413f756243e7b71221b81e36488f80d15996c-1599613283607/video/webcams.webm&quot;</span>)</span></code></pre></div>
+<p>Two files will be downloaded in your work directory.</p>
+</div>
+<div id="ice" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> ICE</h2>
 <p>The ICE Support Clinic provides one-to-one guidance and assistance daily from 15:00-16:00. Click <a href="https://ice.xjtlu.edu.cn/mod/page/view.php?id=142089">here</a>.</p>
 <p>Recordings of online training sessions are available <a href="https://ice.xjtlu.edu.cn/mod/glossary/view.php?id=128625">here</a>.</p>
 <p><a href="https://ice.xjtlu.edu.cn/course/view.php?id=1631">Online Quiz Standardisation Module</a> teaches staff about the ICE’s Quiz activity.</p>
 <p>Podcasts about the XJTLU Experience during COVID-19 for UoL Staff are available <a href="https://connect.xjtlu.edu.cn/view/view.php?t=kD90XzHKFxeqnty1Ppvc">here</a>.</p>
 <p>As a reminder, several ICE and BigBlueButton user guides related to a variety of features are available via the <a href="https://ice.xjtlu.edu.cn/course/view.php?id=1605">Online Learning and Teaching Technology Support</a> page. There is also an <a href="https://ice.xjtlu.edu.cn/course/view.php?id=1605&amp;section=17">FAQ/Support forum</a>.</p>
 </div>
-<div id="uol" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> UoL</h2>
+<div id="uol" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> UoL</h2>
 <p><a href="https://www.liverpool.ac.uk/csd/fundamentals/">IT Fundamentals for staff</a></p>
 </div>
-<div id="matlab" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> MatLab</h2>
+<div id="matlab" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> MatLab</h2>
 <ul>
 <li><a href="https://guide.xjtlu.edu.cn/how-to-register-and-install-matlab-license-for-student.html">MATLAB License Registration and Installation Guide (For student)</a></li>
 <li><a href="https://guide.xjtlu.edu.cn/how-to-register-and-install-matlab-license-for-staff.html">MATLAB License Registration and Installation Guide (For staff)</a></li>

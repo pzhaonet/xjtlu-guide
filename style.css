@@ -1,0 +1,46 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+.cl{
+  float: left;
+  width: 49%;
+  text-align: left;
+}
+.cc{
+  display: inline-block;
+  width: 2%;
+  text-align: center;
+}
+.cr{
+  float: right;
+  width: 49%;
+  text-align: left;
+}
+
+.clear{ clear:both} 
+
+.rmdas, .rmdvd, .rmdrd {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
+.rmdas {
+  background-image: url("image/as.png");
+}
+.rmdvd {
+  background-image: url("image/vd.png");
+}
+.rmdrd {
+  background-image: url("image/rd.png");
+}
