@@ -313,6 +313,12 @@ Note: the general IT Consumable/Digital Product is centralized by MITS budget su
 <p>For example:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="it.html#cb6-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;https://bbbload.xjtlu.edu.cn/presentation/4c0413f756243e7b71221b81e36488f80d15996c-1599613283607/video/webcams.webm&quot;</span>)</span></code></pre></div>
 <p>Two files will be downloaded in your work directory.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>(Experimental) If you would like to merge the webcam video and the shared desktop video into one, you must install <a href="https://ffmpeg.org/">ffmpeg</a> in advance, and set <code>if_merge = TRUE</code> in <code>download_bbb()</code>.</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="it.html#cb7-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;webcam_url&quot;</span>, <span class="dt">if_merge =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<p>Warning: The merging by ffmpeg takes time! A 10-min presentation takes about 10 minutes to merge. I would recommend Camtasia for merging. XJTLU has purchased the license for the staff.</p>
+<p><img src="image/download_bbb3.png" /></p>
 </div>
 <div id="ice" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> ICE</h2>
