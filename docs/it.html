@@ -302,7 +302,7 @@ Note: the general IT Consumable/Digital Product is centralized by MITS budget su
 <span id="cb4-2"><a href="it.html#cb4-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;pzhaonet/xjtlu&quot;</span>)</span>
 <span id="cb4-3"><a href="it.html#cb4-3"></a><span class="kw">library</span>(<span class="st">&quot;xjtlu&quot;</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
-<li>Open your video page on bbb. Right click on the webcam recording window, and choose “Copy video address”.</li>
+<li>Open your video page on bbb. Copy the complete hyperlink which appears at the address bar of your browser.</li>
 </ol>
 <p><img src="image/download_bbb1.png" /></p>
 <p><img src="image/download_bbb2.png" /></p>
@@ -311,7 +311,7 @@ Note: the general IT Consumable/Digital Product is centralized by MITS budget su
 </ol>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="it.html#cb5-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;webcam_url&quot;</span>)</span></code></pre></div>
 <p>For example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="it.html#cb6-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;https://bbbload.xjtlu.edu.cn/presentation/4c0413f756243e7b71221b81e36488f80d15996c-1599613283607/video/webcams.webm&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="it.html#cb6-1"></a><span class="kw">download_bbb</span>(<span class="st">&quot;https://bbbload.xjtlu.edu.cn/playback/presentation/2.0/playback.html?meetingId=4c0413f756243e7b71221b81e36488f80d15996c-1602031837942&quot;</span>)</span></code></pre></div>
 <p>Two files will be downloaded in your work directory.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>(Experimental) If you would like to merge the webcam video and the shared desktop video into one, you must install <a href="https://ffmpeg.org/">ffmpeg</a> in advance, and specify the name of the merged file in <code>download_bbb()</code> like this:</li>
